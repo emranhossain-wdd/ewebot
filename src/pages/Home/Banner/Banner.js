@@ -7,7 +7,7 @@ AOS.init();
 
 const Banner = () => {
     return (
-        <div className='banner mx-auto flex g-5'>
+        <div className='banner mx-auto flex '>
             <div data-aos="fade-in" className="banner-Image ">
                 <img  src="https://i.ibb.co/hsXh8Gn/smiling-girl.jpg" alt="banner" />
                 <div className="sub-image">
@@ -50,11 +50,20 @@ const Banner = () => {
                     </h2>
                     <p className='text-xl'>Ensuring the best return on investment for your bespoke SEO campaign requirement.</p>
                 </div>
-                <div className="searchSite bg-white py-2 px-3 rounded">
+                <div className="searchSite bg-white py-2 px-3 rounded mb-12">
                     <form className='search' action="">
                         <input className='py-3 w-64 px-2 rounded' type="text" placeholder='http:// yoursite.com' />
                         <button className='px-6 search-btn py-3 text-base rounded text-white' type="submit">Analyze Your Site</button>
                     </form>
+                </div>
+                <div className="contact flex gap-4 cursor-pointer">
+                    <div className="i-image py-2">
+                        <img className='w-6' src="https://i.ibb.co/3yL5rZr/img-box-29-orange.png" alt="phone" />
+                    </div>
+                    <div className="contact-text font-bold">
+                        <h2 className='text-4xl'>800-123-4567</h2>
+                        <h4 className='text-sm'>INFO@COMPANY.COM</h4>
+                    </div>
                 </div>
             </div>
         </div>
