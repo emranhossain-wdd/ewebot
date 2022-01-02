@@ -6,6 +6,7 @@ import Banner from './Banner/Banner';
 import Services from '../Services/Services';
 import Navigation from '../Shared/Navigation/Navigation';
 import Experience from './Experience/Experience';
+import Feature from './Feature/Feature';
 
 const Home = () => {
     return (
@@ -17,6 +18,8 @@ const Home = () => {
             <Services />
 
             <ChooseUs />
+            <Feature />
+            {/* <ExperienceDownPart /> */}
         </div>
     );
 };
