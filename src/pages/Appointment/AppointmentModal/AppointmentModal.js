@@ -34,7 +34,9 @@ const AppointmentModal = ({
     phone: "",
   };
   const [appointmentInfo, setAppointmentInfo] = useState(initialInfo);
-  const { name, time } = booking;
+  // const { name, time } = booking;
+  const name = user?.displayName;
+  const time = 'january';
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -54,24 +56,24 @@ const AppointmentModal = ({
     };
     console.log(appointment);
     // send to the server
-    fetch('http://localhost:5000/appointments',{
-      method:"POST",
-      headers:{
-        "content-type":"application/json"
+    fetch('http://localhost:5000/appointments', {
+      method: "POST",
+      headers: {
+        "content-type": "application/json"
       },
-      body:JSON.stringify(appointment)
-    }).then(res=>res.json())
-    .then(data=>{
-      if(data.insertedId){
-        setBookingSuccess(true)
-        handleBookingClose();
-      }
-    })
+      body: JSON.stringify(appointment)
+    }).then(res => res.json())
+      .then(data => {
+        if (data.insertedId) {
+          setBookingSuccess(true)
+          handleBookingClose();
+        }
+      })
 
-    
-    
+
+
   };
-  
+
   return (
     <Modal
       aria-labelledby="transition-modal-title"

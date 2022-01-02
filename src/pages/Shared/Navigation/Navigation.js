@@ -15,11 +15,17 @@ const Navigation = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-        
-          
+
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-           EWEBOT
+            EWEBOT
           </Typography>
+          <Link
+            style={{ textDecoration: "none", color: "white" }}
+            to="/"
+          >
+            <Button color="inherit">Home</Button>
+          </Link>
           <Link
             style={{ textDecoration: "none", color: "white" }}
             to="/appointment"
