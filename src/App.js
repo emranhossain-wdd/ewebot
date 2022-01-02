@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
 import Home from './pages/Home/Home';
-import Services from './pages/Services/Services';
+import ExperienceDownPart from './pages/ExperienceDownPart/ExperienceDownPart';
 
 function App() {
   return (
     <>
       <Home />
-      <Services/>
+      <ExperienceDownPart/>
     </>
   );
 }

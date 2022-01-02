@@ -1,0 +1,25 @@
+.shadow{
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.backgroundImage{
+    animation-duration: 3s;
+    animation-name: slidein;
+
+}
+h2{
+    font-size: 80px;
+    background: -webkit-linear-gradient(rgb(248, 84, 7), rgb(243, 184, 20));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
