@@ -7,10 +7,9 @@ import Navigation from '../Shared/Navigation/Navigation';
 const Home = () => {
     return (
         <div>
+            <Navigation />
             <Banner />
             <Services />
-            <Navigation></Navigation>
-
         </div>
     );
 };
