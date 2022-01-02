@@ -11,7 +11,7 @@
   animation: slidein 8s infinite;
   overflow: hidden;
 }
-h2{
+.experiencePart h2{
   font-size: 80px;
   background: -webkit-linear-gradient(rgb(248, 84, 7), rgb(243, 184, 20));
   -webkit-background-clip: text;
