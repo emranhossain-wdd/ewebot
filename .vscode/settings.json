@@ -1,4 +1,6 @@
 {
-    "emmet.triggerExpansionOnTab": true,
-    "files.associations": {"*html": "html"}
-}
+    "emmet.includeLanguages": {
+       "javascript": "javascriptreact"
+   },
+   "git.enableCommitSigning": true
+ }
