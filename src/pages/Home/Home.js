@@ -1,9 +1,12 @@
 import React from 'react';
+import Navigation from '../Shared/Navigation/Navigation';
+
 
 const Home = () => {
     return (
-        <div className='text-5xl'>
-            This is home
+        <div>
+            <Navigation></Navigation>
+           
         </div>
     );
 };
