@@ -5,10 +5,10 @@ import Banner from './Banner/Banner';
 import Navigation from '../Shared/Navigation/Navigation';
 import Experience from './Experience/Experience';
 import Feature from './Feature/Feature';
-import ExperienceDownPart from '../ExperienceDownPart/ExperienceDownPart';
 import Services from './Services/Services';
 import BannerDownPart from './BannerDownPart/BannerDownPart';
 import ChooseUs from './ChooseUs/ChooseUs';
+import ExperienceDownPart from './ExperienceDownPart/ExperienceDownPart';
 
 const Home = () => {
     return (
