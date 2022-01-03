@@ -1,15 +1,17 @@
 import { Container, Grid, Paper, Typography } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { fetchProfessionals } from '../../../Redux/slices/ProfessionalsSlice/professionalsSlice';
 
 const Professionals = () => {
-    const [professionals, setProfessionals] = useState([]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
-        fetch('https://murmuring-citadel-28008.herokuapp.com/professionals')
-            .then(res => res.json())
-            .then(data => setProfessionals(data))
-    }, [])
+        dispatch(fetchProfessionals());
+    }, [dispatch])
+
+    const professionals = useSelector(state => state.professionals.professionals)
 
     return (
         <Container>
@@ -18,7 +20,7 @@ const Professionals = () => {
                     <Paper elevation={3}>
                         <Link to={`appointment/${professional?._id}`}>
                             <Typography>
-                                <img className='rounded-lg' src={professional.img} alt='' />
+                                <img className='rounded-lg' src={professional?.img} alt='' />
                             </Typography>
                             <Typography
                                 variant="h5"
