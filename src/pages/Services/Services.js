@@ -16,7 +16,7 @@ const Services = () => {
         <>
             <div className='flex flex-col items-center'>
                 <h3 className='text-lg font-semibold'>PRICING PLANS</h3>
-                <h2 className='text-4xl font-bold'>The Best Solutions for Our Clients</h2>
+                <h2 className='text-yellow text-4xl font-bold'>The Best Solutions for Our Clients</h2>
                 <div className='bg-gray-200 rounded-full my-8'>
                     <button onClick={() => setMonthlyPlan(true)} className={classNames(monthlyPlan ? 'bg-gradient-to-r from-orange-300 to-orange-400 rounded-full text-white' : 'bg-transparent text-slate-600', 'py-3 px-6 font-semibold')}>MONTHLY</button>
                     <button onClick={() => setMonthlyPlan(false)} className={classNames(!monthlyPlan ? 'bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full text-white' : 'bg-transparent text-slate-600', 'py-3 px-6 font-semibold')}>YEARLY</button>

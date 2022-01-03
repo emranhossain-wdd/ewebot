@@ -7,6 +7,7 @@ import Services from '../Services/Services';
 import Navigation from '../Shared/Navigation/Navigation';
 import Experience from './Experience/Experience';
 import Feature from './Feature/Feature';
+import Testimonial from './Testimonial/Testimonial';
 
 const Home = () => {
     return (
@@ -14,12 +15,11 @@ const Home = () => {
             <Navigation />
             <Banner />
             <Experience />
-            {/* <ExperienceDownPart /> */}
+            <ExperienceDownPart />
             <Services />
-
             <ChooseUs />
             <Feature />
-            {/* <ExperienceDownPart /> */}
+            <Testimonial />
         </div>
     );
 };
