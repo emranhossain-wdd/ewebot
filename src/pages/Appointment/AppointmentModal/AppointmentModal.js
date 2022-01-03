@@ -34,7 +34,9 @@ const AppointmentModal = ({
     phone: "",
   };
   const [appointmentInfo, setAppointmentInfo] = useState(initialInfo);
-  const { name, time } = booking;
+  // const { name, time } = booking;
+  const name = user?.displayName;
+  const time = 'january';
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
