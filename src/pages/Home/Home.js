@@ -1,17 +1,16 @@
 import React from 'react';
 import BannerDownPart from '../BannerDownPart/BannerDownPart';
-import ChooseUs from '../BottomPartExperience/ChooseUs';
-import ExperienceDownPart from '../ExperienceDownPart/ExperienceDownPart';
+import FooterBody from '../Footer/FooterBody/FooterBody';
+import FooterTop from '../Footer/FooterTop/FooterTop';
 import Banner from './Banner/Banner';
 
 const Home = () => {
     return (
         <div>
-
             <Banner />
-
-            <ExperienceDownPart />
-            <ChooseUs />
+            <BannerDownPart />
+            <FooterTop/>
+            <FooterBody/>
         </div>
     );
 };
