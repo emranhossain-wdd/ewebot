@@ -20,19 +20,21 @@ import { Button } from "@mui/material";
 import useAuth from "../../../hooks/useAuth";
 
 const drawerWidth = 200;
-
 function Dashboard(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { admin } = useAuth();
+  const { admin, logout } = useAuth();
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
   const drawer = (
-    <div>
-      <Toolbar />
-      <Divider />
+    <div className="h-screen bg-gradient-to-r from-yellow-100 to-yellow-200">
+      <Toolbar className="" />
+      <Link to="/">
+        <Button color="inherit">Home</Button>
+      </Link>
+      <br />
       <Link to="/appointment">
         <Button color="inherit">Appointment</Button>
       </Link>
@@ -50,16 +52,12 @@ function Dashboard(props) {
           </Link>
         </Box>
       )}
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
+      <Button onClick={logout} color="inherit">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+        </svg>
+        Logout
+      </Button>
     </div>
   );
 
