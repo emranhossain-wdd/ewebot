@@ -9,6 +9,7 @@ import Services from './Services/Services';
 import BannerDownPart from './BannerDownPart/BannerDownPart';
 import ChooseUs from './ChooseUs/ChooseUs';
 import ExperienceDownPart from './ExperienceDownPart/ExperienceDownPart';
+import Testimonial from './Testimonial/Testimonial';
 
 const Home = () => {
     return (
@@ -19,11 +20,12 @@ const Home = () => {
             <Experience />
             <ExperienceDownPart />
             <Feature />
+
             <Services />
             <ChooseUs />
+            <Testimonial />
             <FooterTop />
             <FooterBody />
-
         </div>
     );
 };
