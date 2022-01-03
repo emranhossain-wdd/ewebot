@@ -44,7 +44,7 @@ const FooterBody = () => {
                 </div>
             </div>
             <hr className='w-5/6 mx-auto  mt-10' />
-            <div><p className='text-center text-gray-500 font-normal my-5'>© 2021 — team-34 @ Kaniz, Happy, Emran, Tanvir</p></div>
+            <div><p className='text-center text-gray-500 font-normal my-5'>© 2021 — team-34 @ Ewebot</p></div>
         </div>
     );
 };

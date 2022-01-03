@@ -1,11 +1,11 @@
 import React from 'react';
 import './ChooseUs.css';
-import service1 from '../../images/home10_service1-active.png';
-import service2 from '../../images/home10_service2-active.png';
-import service3 from '../../images/home10_service3.png';
-import service4 from '../../images/home10_service4-active.png';
-import service5 from '../../images/home10_service5.png';
-import service6 from '../../images/home10_service6-active.png';
+import service1 from '../../../images/home10_service1-active.png';
+import service2 from '../../../images/home10_service2-active.png';
+import service3 from '../../../images/home10_service3.png';
+import service4 from '../../../images/home10_service4-active.png';
+import service5 from '../../../images/home10_service5.png';
+import service6 from '../../../images/home10_service6-active.png';
 
 const ChooseUs = () => {
     const offers = [
