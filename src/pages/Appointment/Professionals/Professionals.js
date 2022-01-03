@@ -14,7 +14,7 @@ const Professionals = () => {
     return (
         <Container>
             <Grid container spacing={3} sx={{ py: 3 }}>
-                {professionals.map((professional) => (<Grid key={professional.id} item xs={12} sm={6} md={4}>
+                {professionals.map((professional) => (<Grid key={professional._id} item xs={12} sm={6} md={4}>
                     <Paper elevation={3}>
                         <Link to={`appointment/${professional?._id}`}>
                             <Typography>

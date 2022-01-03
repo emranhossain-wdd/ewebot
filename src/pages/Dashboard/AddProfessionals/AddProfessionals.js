@@ -1,115 +1,131 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Fade from "@mui/material/Fade";
-import Typography from "@mui/material/Typography";
-import { Button, TextField } from "@mui/material";
-import useAuth from "../../../hooks/useAuth";
-
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: 400,
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-};
-
-const AddProfessionals = ({
-  openBooking,
-  handleBookingClose,
-
-  date,
-  setBookingSuccess,
-}) => {
-  const { user } = useAuth();
-  const initialInfo = {
-    patientName: user.displayName,
-    email: user.email,
-    phone: "",
-  };
-  const [appointmentInfo, setAppointmentInfo] = useState(initialInfo);
-  // const { name, time } = booking;
-  const name = user?.displayName;
-  const time = "january";
-  const handleOnBlur = (e) => {
-    const field = e.target.name;
-    const value = e.target.value;
-    const newAppointmentData = { ...appointmentInfo };
-    newAppointmentData[field] = value;
-
-    setAppointmentInfo(newAppointmentData);
-  };
-  const handleBookingSubmit = (e) => {
-    e.preventDefault();
-    // collect
-    const appointment = {
-      ...appointmentInfo,
-      time,
-      serviceName: name,
-      date: date.toLocaleDateString(),
-    };
-    console.log(appointment);
-    // send to the server
-    fetch("https://murmuring-citadel-28008.herokuapp.com/appointments", {
+import { Button, TextField, Typography } from "@mui/material";
+import { Box, margin } from "@mui/system";
+import React from "react";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
+import "./AddProfessionals.css";
+const AddProfessionals = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  // add new professional to appointment page
+  const onSubmit = (data) => {
+    fetch(`https://murmuring-citadel-28008.herokuapp.com/addProfessional`, {
       method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(appointment),
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          setBookingSuccess(true);
-          handleBookingClose();
+      .then((result) => {
+        console.log(data);
+        if (result.insertedId) {
+          Swal.fire("Good job!", "Your professional has been added!");
+        } else {
+          alert("Try again");
         }
       });
-  };
 
+    reset();
+  };
+  const style = {
+    position: "relative",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: 400,
+    bgcolor: "background.paper",
+    border: "2px solid #000",
+    boxShadow: 24,
+    p: 4,
+  };
   return (
-    <div>
-      <form onSubmit={handleBookingSubmit}>
+    <Box sx={style}>
+      <Typography variant="h6" component="h2">
+        ADD PROFESSIONAlS
+      </Typography>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <TextField
-          disabled
           sx={{ width: "90%", m: 1 }}
           id="outlined-size-small"
-          defaultValue={time}
+          placeholder="Name"
+          {...register("name", { required: true })}
+          size="small"
+        />
+        <TextField
+          type="text"
+          sx={{ width: "90%", m: 1 }}
+          id="outlined-size-small"
+          placeholder="time"
+          {...register("time", { required: true })}
+          size="small"
+        />
+        <TextField
+          type="text"
+          sx={{ width: "90%", m: 1 }}
+          id="outlined-size-small"
+          placeholder="experience"
+          {...register("experience", { required: true })}
+          size="small"
+        />
+       
+       
+        <textarea
+         type="text"
+          style={{ border: "1px solid gray",height:"90px", width: "90%", marginLeft:"9px",}}
+          placeholder="Description1"
+          {...register("des1", { required: true })}
+        />
+        <br />
+        <textarea
+         type="text"
+          style={{ border: "1px solid gray",height:"90px", width: "90%", marginLeft:"9px",}}
+          placeholder="Description2"
+          {...register("des2", { required: true })}
+        />
+        <br />
+        <TextField
+          type="email"
+          sx={{ width: "90%", m: 1 }}
+          placeholder="Mail"
+          id="outlined-size-small"
+          {...register("mail", { required: true })}
+          size="small"
+        />
+        <TextField
+          type="number"
+          sx={{ width: "90%", m: 1 }}
+          id="outlined-size-small"
+          placeholder="Phone"
+          {...register("phone", { required: true })}
+          size="small"
+        />
+        <TextField
+          type="number"
+          sx={{ width: "90%", m: 1 }}
+          id="outlined-size-small"
+          placeholder="Space"
+          {...register("space", { required: true })}
           size="small"
         />
         <TextField
           sx={{ width: "90%", m: 1 }}
           id="outlined-size-small"
-          name="patientName"
-          onBlur={handleOnBlur}
-          defaultValue={user.displayName}
+          placeholder="designation"
           size="small"
+          {...register("designation", { required: true })}
         />
         <TextField
+          type="text"
+          placeholder="Add Your Image"
           sx={{ width: "90%", m: 1 }}
           id="outlined-size-small"
-          name="email"
-          onBlur={handleOnBlur}
-          defaultValue={user.email}
           size="small"
+          {...register("img", { required: true })}
         />
-        <TextField
-          sx={{ width: "90%", m: 1 }}
-          id="outlined-size-small"
-          name="phone"
-          onBlur={handleOnBlur}
-          defaultValue="your phone number"
-          size="small"
-        />
-        <TextField
-          disabled
-          sx={{ width: "90%", m: 1 }}
-          id="outlined-size-small"
-          defaultValue={date.toDateString()}
-          size="small"
-        />
+        {errors.exampleRequired && <span>This field is required</span>}
         <Button
           type="submit"
           sx={{ mt: 2, width: "25%", mx: "auto" }}
@@ -119,7 +135,7 @@ const AddProfessionals = ({
           SUBMIT
         </Button>
       </form>
-    </div>
+    </Box>
   );
 };
 
