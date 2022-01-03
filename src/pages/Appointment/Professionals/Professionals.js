@@ -6,7 +6,7 @@ const Professionals = () => {
     const [professionals, setProfessionals] = useState([]);
 
     useEffect(() => {
-        fetch('/professionals.json')
+        fetch('https://murmuring-citadel-28008.herokuapp.com/professionals')
             .then(res => res.json())
             .then(data => setProfessionals(data))
     }, [])
@@ -16,7 +16,7 @@ const Professionals = () => {
             <Grid container spacing={3} sx={{ py: 3 }}>
                 {professionals.map((professional) => (<Grid key={professional.id} item xs={12} sm={6} md={4}>
                     <Paper elevation={3}>
-                        <Link to={`appointment/${professional?.id}`}>
+                        <Link to={`appointment/${professional?._id}`}>
                             <Typography>
                                 <img className='rounded-lg' src={professional.img} alt='' />
                             </Typography>
