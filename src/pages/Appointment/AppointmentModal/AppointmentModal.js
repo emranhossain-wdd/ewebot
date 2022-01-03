@@ -25,7 +25,7 @@ const AppointmentModal = ({
   handleBookingClose,
   booking,
   date,
-  setBookingSuccess
+  setBookingSuccess,
 }) => {
   const { user } = useAuth();
   const initialInfo = {
@@ -56,22 +56,20 @@ const AppointmentModal = ({
     };
     console.log(appointment);
     // send to the server
-    fetch('http://localhost:5000/appointments', {
+    fetch("https://murmuring-citadel-28008.herokuapp.com/appointments", {
       method: "POST",
       headers: {
-        "content-type": "application/json"
+        "content-type": "application/json",
       },
-      body: JSON.stringify(appointment)
-    }).then(res => res.json())
-      .then(data => {
+      body: JSON.stringify(appointment),
+    })
+      .then((res) => res.json())
+      .then((data) => {
         if (data.insertedId) {
-          setBookingSuccess(true)
+          setBookingSuccess(true);
           handleBookingClose();
         }
-      })
-
-
-
+      });
   };
 
   return (

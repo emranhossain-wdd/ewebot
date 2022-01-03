@@ -23,6 +23,7 @@ const Home = () => {
             <ChooseUs />
             <FooterTop />
             <FooterBody />
+
         </div>
     );
 };
