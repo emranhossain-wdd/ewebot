@@ -61,3 +61,10 @@
     background-color: #FF7426;
     transition: .5s;
 }
+.contact-text{
+    color: #3b3663;
+}
+.contact:hover h2{
+    color: #FF7426;
+    transition: .5s;
+}
