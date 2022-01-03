@@ -15,7 +15,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import {  Link, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { Button } from "@mui/material";
 import useAuth from "../../../hooks/useAuth";
 
@@ -39,12 +39,15 @@ function Dashboard(props) {
       <Link to="/dashboard">
         <Button color="inherit">Dashboard</Button>
       </Link>
+
       {admin && (
         <Box>
           <Link to={`/dashboard/makeAdmin`}>
             <Button color="inherit">Make Admin</Button>
           </Link>
-         
+          <Link to="/dashboard/addProfessional">
+            <Button color="inherit">Add Professional</Button>
+          </Link>
         </Box>
       )}
       <List>
