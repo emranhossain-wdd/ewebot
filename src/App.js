@@ -13,13 +13,17 @@ import AdminRoute from "./pages/Login/AdminRoute/AdminRoute";
 import Login from "./pages/Login/Login/Login";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./pages/Login/Register/Register";
+import Navigation from "./pages/Shared/Navigation/Navigation";
+import ScreenAnimation from "./ScreenAnimation/ScreenAnimation";
 
 function App() {
   const [date, setDate] = React.useState(new Date());
+  const screen = <ScreenAnimation />;
   return (
     <div className="">
       <AuthProvider>
         <Router>
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/home" element={<Home />}></Route>

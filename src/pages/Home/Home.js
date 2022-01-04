@@ -10,22 +10,22 @@ import BannerDownPart from './BannerDownPart/BannerDownPart';
 import ChooseUs from './ChooseUs/ChooseUs';
 import ExperienceDownPart from './ExperienceDownPart/ExperienceDownPart';
 import Testimonial from './Testimonial/Testimonial';
+import ScreenAnimation from '../../ScreenAnimation/ScreenAnimation';
 
 const Home = () => {
     return (
         <div>
-            <Navigation />
             <Banner />
             <BannerDownPart />
             <Experience />
             <ExperienceDownPart />
             <Feature />
-
             <Services />
             <ChooseUs />
             <Testimonial />
             <FooterTop />
             <FooterBody />
+            <ScreenAnimation />
         </div>
     );
 };

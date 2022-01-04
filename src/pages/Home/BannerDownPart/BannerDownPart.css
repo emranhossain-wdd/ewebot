@@ -1,10 +1,13 @@
 .banner-shadow{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
-.banner-design{
-    margin-top: -100px;
-}
 .number-design{
-    margin-top: -160px;
-    color:white
+    color:white;
+}
+.creativity img{
+    transition: .5s;
+}
+.creativity:hover img{
+    transform: scale(1.1);
+    transition: .5s;
 }

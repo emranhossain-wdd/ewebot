@@ -7,9 +7,9 @@ AOS.init();
 
 const Banner = () => {
     return (
-        <div className='banner mx-auto flex '>
-            <div data-aos="fade-in" className="banner-Image ">
-                <img  src="https://i.ibb.co/hsXh8Gn/smiling-girl.jpg" alt="banner" />
+        <div className='banner mx-auto flex pb-4'>
+            <div data-aos="fade-in" className="banner-Image z-0">
+                <img className='z-0'  src="https://i.ibb.co/hsXh8Gn/smiling-girl.jpg" alt="banner" />
                 <div className="sub-image">
                     <img data-aos="fade-right" data-aos-duration="1200" data-aos-once="true" id="sub1" src="https://i.ibb.co/VpMP4qb/home10-img3.png" alt="" />
                     <img data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1100" data-aos-once="true" id="sub2" src="https://i.ibb.co/BBZGDG1/home10-img1.png" alt="" />

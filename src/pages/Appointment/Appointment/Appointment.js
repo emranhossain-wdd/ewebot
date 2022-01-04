@@ -8,7 +8,6 @@ const Appointment = () => {
     // const [date, setDate] = React.useState(new Date());
     return (
         <div>
-            <Navigation />
             {/* <AppointmentHeader date={date}setDate={setDate}></AppointmentHeader> */}
             {/* <AvailableAppointments date={date} setDate={setDate}></AvailableAppointments> */}
             <Professionals />

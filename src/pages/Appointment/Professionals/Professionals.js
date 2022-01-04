@@ -2,6 +2,7 @@ import { Container, Grid, Paper, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import './Profesionals.css'
 import { fetchProfessionals } from '../../../Redux/slices/ProfessionalsSlice/professionalsSlice';
 
 const Professionals = () => {
@@ -24,18 +25,18 @@ const Professionals = () => {
                             </Typography>
                             <Typography
                                 variant="h5"
-                                style={{ color: "#5CE7ED", fontWeight: "600" }}
+                                style={{ color: "#3730a3", fontWeight: "600", textAlign:'center' }}
                                 gutterBottom
                                 component="div"
                             >
                                 {professional?.name}
                             </Typography>
-                            <Typography variant="h6" gutterBottom component="div">
-                                {professional?.time}
+                            <Typography className='text-5xl' variant="h6" 
+                                style={{ color: "#312e81", fontWeight: "500", textAlign:'center', }}
+                            gutterBottom component="div">
+                                {professional?.designation}
                             </Typography>
-                            <Typography variant="caption" display="block" gutterBottom>
-                                {professional?.space} SPACES AVAILABLE
-                            </Typography>
+                            
                         </Link>
                     </Paper>
                 </Grid>

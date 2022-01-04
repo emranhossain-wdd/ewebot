@@ -11,7 +11,6 @@ const ProfessionalsDetails = ({ date, setDate }) => {
 
     return (
         <div>
-            <Navigation />
             <span className='text-5xl'>{id}</span>
             <AppointmentHeader date={date} setDate={setDate}></AppointmentHeader>
             {/* <AvailableAppointments date={date} setDate={setDate}></AvailableAppointments> */}
