@@ -25,7 +25,6 @@ const Home = () => {
             <ChooseUs />
             <Testimonial />
             <FooterTop />
-            <FooterBody />
         </div>
     );
 };

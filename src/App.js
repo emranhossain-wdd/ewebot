@@ -9,6 +9,7 @@ import AllAppointments from "./pages/Dashboard/AllAppointments/AllAppointments";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin/MakeAdmin";
+import FooterBody from "./pages/Footer/FooterBody/FooterBody";
 import Home from "./pages/Home/Home";
 import AdminRoute from "./pages/Login/AdminRoute/AdminRoute";
 import Login from "./pages/Login/Login/Login";
@@ -49,11 +50,11 @@ function App() {
               <Route path="/dashboard" element={<DashboardHome />}></Route>
               <Route
                 path="/dashboard/addProfessional"
-                element={ <AdminRoute><AddProfessionals></AddProfessionals></AdminRoute>}
+                element={<AdminRoute><AddProfessionals></AddProfessionals></AdminRoute>}
               ></Route>
               <Route
                 path="/dashboard/allAppointments"
-                element={ <AdminRoute><AllAppointments></AllAppointments></AdminRoute>}
+                element={<AdminRoute><AllAppointments></AllAppointments></AdminRoute>}
               ></Route>
               <Route
                 path={`/dashboard/makeAdmin`}
@@ -67,6 +68,7 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
           </Routes>
+          <FooterBody />
         </Router>
       </AuthProvider>
     </div>
