@@ -1,8 +1,17 @@
-follow the process:
-1. git clone https://github.com/emranhossain-wdd/ewebot.git
-2. git branch branch-name(আজকে যে যে পার্ট নিয়ে কাজ করবো | যেমন আমি রিডাক্স করতেছি তাহলে ব্রাঞ্চ নাম আমার জন্য হবে redux)
-3. git checkout branch-name(আজকে যে যে পার্ট নিয়ে কাজ করবো | যেমন আমি রিডাক্স করতেছি তাহলে ব্রাঞ্চ নাম আমার জন্য হবে redux)
-4. তারপর কাজ শুরু করতে হবে...
-5. git add .
-6. git commit -m "your commit massage"
-7. git push origin branch-name
+Readme md file
+
+Website name **Ewebot**
+
+
+Website link [link]( website link )
+
+*Everyone will find a well-designed home page on this website, which has header banner, slider, service cart operation and everyone can enjoy animation.
+
+*Clients can take appointments for our professional consultant here any one can use a date picker to pick their appointments.
+*Provided Services : SEO service, Digital Marketing , Web Solution , CMS , Hosting
+*Selling Packages : Basics, Standrat, Premium (all have monthly and yearly facilities)
+*Dashboard :
+*Appointments : There have a calendar for check date wise appointments (client and both can check this)
+*Make Admin : An admin can make aner admin (only admin can saw).
+*Add Professional : An admin can add professional consultants for his company.
+*Login/Registration : those who want to visit this website must have to login or new users need to register fast. 
