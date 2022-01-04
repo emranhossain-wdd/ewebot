@@ -18,7 +18,25 @@ const AllAppointments = () => {
       .then((res) => res.json())
       .then((data) => setAppointments(data));
   }, [control, appointments]);
-
+  //Handle Status
+  const handleApprove = (id) => {
+    setControl(false);
+    const proceed = window.confirm(
+      "Want to Status Done the appointment from Status Pending??"
+    );
+    if (proceed) {
+      axios
+        .put(
+          `https://murmuring-citadel-28008.herokuapp.com/appointmentUpdateFromPending/${id}`
+        )
+        .then((result) => {
+          if (result.data.modifiedCount) {
+            setControl(true);
+            alert("updated successfully!!");
+          }
+        });
+    }
+  };
   // delete users order
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, u want to delete it?");
@@ -49,6 +67,7 @@ const AllAppointments = () => {
               <TableCell>Name</TableCell>
               <TableCell align="right">Time</TableCell>
               <TableCell align="right">Professional Name</TableCell>
+              <TableCell align="right">Update Status</TableCell>
               <TableCell align="right">Action</TableCell>
             </TableRow>
           </TableHead>
@@ -63,6 +82,20 @@ const AllAppointments = () => {
                 </TableCell>
                 <TableCell align="right">{row.time}</TableCell>
                 <TableCell align="right">{row.professionalName}</TableCell>
+                <TableCell
+                  onClick={() => handleApprove(row._id)}
+                  style={{
+                    paddingLeft: "20px",
+                    width: "40px",
+                    backgroundColor: "#138b62",
+                    fontWeight: "bold",
+                    borderRadius: "8px",
+                  }}
+                  align="right"
+                >
+                  {row.status}
+                </TableCell>
+
                 <TableCell
                   style={{
                     paddingLeft: "20px",
