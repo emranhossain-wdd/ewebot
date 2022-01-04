@@ -19,7 +19,7 @@ const Appointments = ({ date }) => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setAppointments(data));
-  }, [date,control, appointments]);
+  }, [date,control, appointments,user.email]);
  // delete appointment from my appointment
  const handleDelete = (id) => {
   const proceed = window.confirm("Are you sure, u want to delete it?");
