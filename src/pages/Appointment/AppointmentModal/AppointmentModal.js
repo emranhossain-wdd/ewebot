@@ -6,7 +6,6 @@ import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import { Button, TextField } from "@mui/material";
 import useAuth from "../../../hooks/useAuth";
-import { jsonEval } from "@firebase/util";
 
 const style = {
   position: "absolute",
@@ -51,6 +50,7 @@ const AppointmentModal = ({
     const appointment = {
       ...appointmentInfo,
       time,
+      status:"pending",
       professionalName: ProfessionalsName,
       date: date.toLocaleDateString(),
     };

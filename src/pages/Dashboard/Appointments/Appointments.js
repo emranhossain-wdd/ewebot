@@ -33,6 +33,7 @@ const Appointments = ({ date }) => {
       .then((data) => {
         if (data.deletedCount) {
           setControl(true);
+        
           alert("Deleted successfully");
         }
       });
@@ -48,6 +49,7 @@ const Appointments = ({ date }) => {
               <TableCell>Name</TableCell>
               <TableCell align="right">Time</TableCell>
               <TableCell align="right">Professional Name</TableCell>
+              <TableCell align="right">Status</TableCell>
               <TableCell align="right">Action</TableCell>
             </TableRow>
           </TableHead>
@@ -62,6 +64,7 @@ const Appointments = ({ date }) => {
                 </TableCell>
                 <TableCell align="right">{row.time}</TableCell>
                 <TableCell align="right">{row.professionalName}</TableCell>
+                <TableCell style={{paddingLeft:"20px", width:"40px",backgroundColor:"#138b62",fontWeight:"bold",borderRadius:"8px" }} align="right">{row.status}</TableCell>
                 <TableCell  style={{paddingLeft:"20px", width:"40px",backgroundColor:"red",fontWeight:"bold",borderRadius:"8px" }}  onClick={() => handleDelete(row?._id)}
                     className=" my-1 mx-auto  " >Delete</TableCell>
               </TableRow>
