@@ -10,8 +10,8 @@ const flickityOptions = {
   }
 const Feature = () => {
     return (
-        <div className='feature py-14 mt-4'>
-            <div className="feature-heading text-center mb-8" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+        <div className='feature py-8 mt-4'>
+            <div className="feature-heading text-center mb-16" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <h4 className='font-semibold text-sm mb-2'>FEATURED PROJECTS</h4>
                 <h3 className='text-3xl font-bold'>Our Case Studies</h3>
             </div>

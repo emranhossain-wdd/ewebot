@@ -2,7 +2,8 @@ import React from 'react';
 import './ExperienceDownPart.css';
 const ExperienceDownPart = () => {
     return (
-        <div className='experiencePart flex'>
+        <div className='experiencePart flex py-14'>
+            
             <div className="experience-part-one mx-auto relative">
                 <div className='experience-before-img'>
                     <img className='top-0 left-0 z-0 ' src='https://livewp.site/wp/md/ewebot/wp-content/uploads/sites/64/2021/01/home10_ellipse.png' alt="" />

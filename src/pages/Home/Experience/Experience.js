@@ -7,12 +7,12 @@ AOS.init();
 
 const Experience = () => {
     return (
-        <div className='experience flex w-11/12 mx-auto relative py-16 mt-12 gap-5'>
+        <div className='experience flex w-11/12 mx-auto relative py-24 mt-12 gap-5'>
             <div className="experience-left-image">
                 <img data-aos="zoom-in" data-aos-duration="1600" data-aos-once="true" src="https://i.ibb.co/m5vGXLS/home10-figure1.jpg" alt="" />
-                <img data-aos="fade-right" data-aos-duration="2000" data-aos-once="true" className='absolute top-8 left-5' src="https://i.ibb.co/Cwk1DRt/home10-phone1.png" alt="" />
-                <img data-aos="fade-up" data-aos-duration="2200" data-aos-once="true" className='absolute top-0 left-24' src="https://i.ibb.co/dMpqF0K/home10-phone2.png" alt="" />
-                <img data-aos="zoom-in-down" data-aos-duration="2400" data-aos-once="true" className='absolute top-48 left-80' src="https://i.ibb.co/NmggryJ/home10-phone3.png" alt="" />
+                <img data-aos="fade-right" data-aos-duration="2000" data-aos-once="true" className='absolute top-12 left-5' src="https://i.ibb.co/Cwk1DRt/home10-phone1.png" alt="" />
+                <img data-aos="fade-up" data-aos-duration="2200" data-aos-once="true" className='absolute top-4 left-24' src="https://i.ibb.co/dMpqF0K/home10-phone2.png" alt="" />
+                <img data-aos="zoom-in-down" data-aos-duration="2400" data-aos-once="true" className='absolute top-52 left-80' src="https://i.ibb.co/NmggryJ/home10-phone3.png" alt="" />
             </div>
 
             <div className="experience-right-details w-3/6">

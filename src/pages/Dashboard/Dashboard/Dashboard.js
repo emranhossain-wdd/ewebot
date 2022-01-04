@@ -5,7 +5,6 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
@@ -23,7 +22,7 @@ function Dashboard(props) {
   };
 
   const drawer = (
-    <div className="h-screen bg-gradient-to-r from-yellow-100 to-yellow-200">
+    <div style={{ backgroundColor: "#3b3663" }} className="h-screen text-white">
       <Toolbar className="" />
       <Link to="/">
         <Button color="inherit">Home</Button>
@@ -71,7 +70,7 @@ function Dashboard(props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: "#3b3663", boxShadow: "none" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
