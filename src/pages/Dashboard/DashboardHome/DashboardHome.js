@@ -10,13 +10,13 @@ const DashboardHome = () => {
 
     return (
         <Grid container spacing={2}>
-        <Grid item xs={12} sm={5}>
+        <Grid item xs={12} md={6}>
             <Calendar
                 date={date}
                 setDate={setDate}
             ></Calendar>
         </Grid>
-        <Grid item xs={12} sm={7}>
+        <Grid item xs={12} md={6}>
             <Appointments date={date}></Appointments>
         </Grid>
     </Grid>

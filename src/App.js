@@ -5,6 +5,7 @@ import AuthProvider from "./Context/AuthProvider/AuthProvider";
 import Appointment from "./pages/Appointment/Appointment/Appointment";
 import ProfessionalsDetails from "./pages/Appointment/ProfessionalsDetails/ProfessionalsDetails";
 import AddProfessionals from "./pages/Dashboard/AddProfessionals/AddProfessionals";
+import AllAppointments from "./pages/Dashboard/AllAppointments/AllAppointments";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin/MakeAdmin";
@@ -49,6 +50,10 @@ function App() {
               <Route
                 path="/dashboard/addProfessional"
                 element={ <AdminRoute><AddProfessionals></AddProfessionals></AdminRoute>}
+              ></Route>
+              <Route
+                path="/dashboard/allAppointments"
+                element={ <AdminRoute><AllAppointments></AllAppointments></AdminRoute>}
               ></Route>
               <Route
                 path={`/dashboard/makeAdmin`}

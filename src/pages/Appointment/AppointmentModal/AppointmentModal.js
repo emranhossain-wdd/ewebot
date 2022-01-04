@@ -25,7 +25,7 @@ const AppointmentModal = ({
   handleBookingClose,
   booking,
   date,
-  setBookingSuccess,
+  setBookingSuccess,ProfessionalsName, appointmentTime
 }) => {
   const { user } = useAuth();
   const initialInfo = {
@@ -36,7 +36,7 @@ const AppointmentModal = ({
   const [appointmentInfo, setAppointmentInfo] = useState(initialInfo);
   // const { name, time } = booking;
   const name = user?.displayName;
-  const time = 'january';
+  const time = appointmentTime;
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -51,7 +51,7 @@ const AppointmentModal = ({
     const appointment = {
       ...appointmentInfo,
       time,
-      serviceName: name,
+      professionalName: ProfessionalsName,
       date: date.toLocaleDateString(),
     };
     console.log(appointment);
@@ -87,7 +87,7 @@ const AppointmentModal = ({
       <Fade in={openBooking}>
         <Box sx={style}>
           <Typography id="transition-modal-title" variant="h6" component="h2">
-            {name}
+          {name}
           </Typography>
           <form onSubmit={handleBookingSubmit}>
             <TextField

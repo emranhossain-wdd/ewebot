@@ -2,7 +2,7 @@ import { Alert, Button, Container, Typography } from '@mui/material';
 import React, { useState } from 'react';
 import AppointmentModal from '../AppointmentModal/AppointmentModal';
 
-const AppointmentBtn = ({ date }) => {
+const AppointmentBtn = ({ date,ProfessionalsName, appointmentTime } ) => {
     const [bookingSuccess, setBookingSuccess] = useState(false);
     const [openBooking, setOpenBooking] = React.useState(false);
     const handleBookingOpen = () => setOpenBooking(true);
@@ -26,7 +26,7 @@ const AppointmentBtn = ({ date }) => {
                     BOOK APPOINTMENT
                 </Button>
             </Container>
-            <AppointmentModal time={date} handleBookingClose={handleBookingClose} openBooking={openBooking} date={date} setBookingSuccess={setBookingSuccess}></AppointmentModal>
+            <AppointmentModal time={date}ProfessionalsName={ProfessionalsName} appointmentTime={appointmentTime} handleBookingClose={handleBookingClose} openBooking={openBooking} date={date} setBookingSuccess={setBookingSuccess}></AppointmentModal>
         </div>
     );
 };
