@@ -1,5 +1,5 @@
 import React from 'react';
-import {ProgressBar} from "react-progressbar-fancy";
+import { ProgressBar } from "react-progressbar-fancy";
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import './Experience.css'
@@ -20,7 +20,7 @@ const Experience = () => {
                     <h5 className='font-semibold text-sm mb-2'>EXPERIENCE</h5>
                     <h2 className='text-2xl font-bold mb-2'>Pay for Qualified Traffic</h2>
                     <p className='mb-10 text-lg'>Ewebot stays ahead of the curve with digital marketing trends. Our success has us leading the pack amongst our competitors with our ability to anticipate change
-                    and innovation.</p>
+                        and innovation.</p>
                 </div>
 
                 <div className="progress-bar mb-14">
@@ -28,19 +28,19 @@ const Experience = () => {
                         className="space mb-7 text-xl"
                         label={"SEO Analysis"}
                         score={90}
-                     />
-                      <ProgressBar
+                    />
+                    <ProgressBar
                         className="space mb-7 text-xl"
                         label={"SEO Audit"}
                         score={79}
-                     />
-                      <ProgressBar
+                    />
+                    <ProgressBar
                         className="space text-xl"
                         label={"Optimization"}
                         score={95}
-                     />
+                    />
                 </div>
-                <button className='ml-4 border border-[#4f46e5] hover:bg-indigo hover:text-[#fff] rounded px-5  py-3 font-semibold transition duration-700'>Discover More</button>
+                <button className='ml-4 border border-[#4f46e5] hover:bg-indigo-600 hover:text-[#fff] rounded px-5  py-3 font-semibold transition duration-700'>Discover More</button>
             </div>
         </div>
     );
