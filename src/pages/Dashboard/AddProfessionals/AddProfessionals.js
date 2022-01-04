@@ -1,5 +1,5 @@
 import { Button, TextField, Typography } from "@mui/material";
-import { Box, margin } from "@mui/system";
+import { Box } from "@mui/system";
 import React from "react";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
@@ -92,6 +92,14 @@ const AddProfessionals = () => {
           placeholder="Mail"
           id="outlined-size-small"
           {...register("mail", { required: true })}
+          size="small"
+        />
+        <TextField
+          type="text"
+          sx={{ width: "90%", m: 1 }}
+          placeholder="experience"
+          id="outlined-size-small"
+          {...register("experience", { required: true })}
           size="small"
         />
         <TextField
