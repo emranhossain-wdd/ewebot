@@ -1,8 +1,15 @@
 .cartShadow{
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px 0px;;
+    transition: .5s;
 }
 .cartShadow:hover{
-    background-color: darkblue;
+    background-color: rgba(53, 30, 107, 0.808);
+    transition: .5s;
+}
+.cartShadow:hover h4{
     color: white;
+}
+.cartShadow:hover p{
+    color: rgb(207, 207, 207);
 }
 

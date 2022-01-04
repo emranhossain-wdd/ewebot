@@ -2,7 +2,9 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { AiFillTwitterCircle, AiFillFacebook, AiFillLinkedin } from "react-icons/ai";
+import './Profesionals.css'
 import { fetchProfessionals } from '../../../Redux/slices/ProfessionalsSlice/professionalsSlice';
+import FooterBody from '../../Footer/FooterBody/FooterBody';
 
 const Professionals = () => {
     const dispatch = useDispatch();
@@ -37,6 +39,7 @@ const Professionals = () => {
                 </div>
                 ))}
             </div>
+            <FooterBody />
         </>
     );
 };

@@ -1,0 +1,59 @@
+.space1.progressBarFancyContainer .progressFill{
+    background: #7171fd;
+}
+.space1 .progressBar {
+    box-shadow: 0px 0px 40px #7171fd96;
+}
+.space1 .progressBarFancyContainer .progressBar>.progressTrack {
+    height: 5px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.space1 .progressBarFancyContainer .progressBar>.progressTrack{
+    background-color: white;
+}
+
+.space2.progressBarFancyContainer .progressFill{
+    background: #ffc04c;
+}
+.space2 .progressBar {
+    box-shadow: 0px 0px 40px #ffc04c8a;
+}
+.space2 .progressBarFancyContainer .progressBar>.progressTrack {
+    height: 5px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.space2 .progressBarFancyContainer .progressBar>.progressTrack{
+    background-color: white;
+}
+
+.space3.progressBarFancyContainer .progressFill{
+    background: #72d82d;
+}
+.space3 .progressBar {
+    box-shadow: 0px 0px 40px #71d82d80;
+}
+.space3 .progressBarFancyContainer .progressBar>.progressTrack {
+    height: 5px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.space3 .progressBarFancyContainer .progressBar>.progressTrack{
+    background-color: white;
+}
+
+.space4.progressBarFancyContainer .progressFill{
+    background: #eb4b2f;
+}
+.space4 .progressBar {
+    box-shadow: 0px 0px 40px #eb4b2f94;
+}
+.space4 .progressBarFancyContainer .progressBar>.progressTrack {
+    height: 5px;
+    border-radius: 10px;
+    box-shadow: none;
+}
+.space4 .progressBarFancyContainer .progressBar>.progressTrack{
+    background-color: white;
+}

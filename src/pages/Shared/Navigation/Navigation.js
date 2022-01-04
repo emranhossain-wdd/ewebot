@@ -4,19 +4,21 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "./../../../hooks/useAuth";
+import logo from '../../../images/ewebot.png'
 
 const Navigation = () => {
   const { user, logout } = useAuth();
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+    <Box sx={{ flexGrow: 1, }}>
+      <AppBar style={{ backgroundColor: "#3b3663" }} position="static">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            EWEBOT
+            <div className="flex items-center py-2">
+              <img className="w-16" src={logo} alt="" />
+              <span className="font-bold text-3xl ml-2 tracking-widest">ewebot</span>
+            </div>
           </Typography>
           <Link
             style={{ textDecoration: "none", color: "white" }}

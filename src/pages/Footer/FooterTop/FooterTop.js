@@ -22,7 +22,7 @@ const FooterTop = () => {
                 </div>
                 <div>
                     <input className='bg-gray-100 border-solid border-2 border-violet-200 lg:w-96 pl-6 py-3 rounded' type="email" placeholder="Email Address" />
-                    <button className='bg-gradient-to-r from-sky-400 to-blue-700 hover:bg-gradient-to-r from-blue-700 to-sky-400 w-32 h-12 rounded text-gray-50 font-bold' type="submit">SIGN UP</button>
+                    <button className='bg-gradient-to-r from-sky-400 to-blue-700 hover:bg-gradient-to-r from-blue-700 to-sky-400 py-3 px-6 rounded text-gray-50 font-bold' type="submit">SIGN UP</button>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@ const AppointmentModal = ({
   handleBookingClose,
   booking,
   date,
-  setBookingSuccess,ProfessionalsName, appointmentTime
+  setBookingSuccess, ProfessionalsName, appointmentTime
 }) => {
   const { user } = useAuth();
   const initialInfo = {
@@ -50,11 +50,11 @@ const AppointmentModal = ({
     const appointment = {
       ...appointmentInfo,
       time,
-      status:"pending",
+      status: "pending",
       professionalName: ProfessionalsName,
       date: date.toLocaleDateString(),
     };
-    console.log(appointment);
+    // console.log(appointment);
     // send to the server
     fetch("https://murmuring-citadel-28008.herokuapp.com/appointments", {
       method: "POST",
@@ -87,7 +87,7 @@ const AppointmentModal = ({
       <Fade in={openBooking}>
         <Box sx={style}>
           <Typography id="transition-modal-title" variant="h6" component="h2">
-          {name}
+            {name}
           </Typography>
           <form onSubmit={handleBookingSubmit}>
             <TextField

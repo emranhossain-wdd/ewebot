@@ -9,19 +9,22 @@ import AllAppointments from "./pages/Dashboard/AllAppointments/AllAppointments";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin/MakeAdmin";
-import FooterBody from "./pages/Footer/FooterBody/FooterBody";
 import Home from "./pages/Home/Home";
 import AdminRoute from "./pages/Login/AdminRoute/AdminRoute";
 import Login from "./pages/Login/Login/Login";
 import PrivateRoute from "./pages/Login/PrivateRoute/PrivateRoute";
 import Register from "./pages/Login/Register/Register";
+import Navigation from "./pages/Shared/Navigation/Navigation";
+import ScreenAnimation from "./ScreenAnimation/ScreenAnimation";
 
 function App() {
   const [date, setDate] = React.useState(new Date());
+  const screen = <ScreenAnimation />;
   return (
     <div className="">
       <AuthProvider>
         <Router>
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/home" element={<Home />}></Route>
@@ -68,7 +71,6 @@ function App() {
             <Route path="/login" element={<Login />}></Route>
             <Route path="/register" element={<Register />}></Route>
           </Routes>
-          <FooterBody />
         </Router>
       </AuthProvider>
     </div>
