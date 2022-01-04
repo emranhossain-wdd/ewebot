@@ -48,6 +48,9 @@ function Dashboard(props) {
           <Link to="/dashboard/addProfessional">
             <Button color="inherit">Add Professional</Button>
           </Link>
+          <Link to="/dashboard/allAppointments">
+            <Button color="inherit">All Appointments</Button>
+          </Link>
         </Box>
       )}
       <List>
