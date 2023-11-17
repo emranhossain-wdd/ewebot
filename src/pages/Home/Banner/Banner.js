@@ -9,7 +9,7 @@ AOS.init();
 
 const Banner = () => {
     return (
-        <div className='banner mx-auto flex pb-4 mt-8'>
+        <div className='banner w-11/12 mx-auto flex justify-center pb-4 mt-8'>
             <div data-aos="fade-in" className="banner-Image z-0">
                 <img className='z-0' src="https://i.ibb.co/hsXh8Gn/smiling-girl.jpg" alt="banner" />
                 <div className="sub-image">
